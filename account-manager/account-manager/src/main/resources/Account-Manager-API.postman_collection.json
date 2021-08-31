@@ -1,0 +1,59 @@
+{
+	"info": {
+		"_postman_id": "d3f80b63-f48d-4d20-8ebd-615f382de0f3",
+		"name": "Account-Manager-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Transfer Amount",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountNumberTo\" : 88888888,\r\n    \"userIdFrom\": 1,\r\n    \"accountNumberFrom\": 12345678,\r\n    \"transferAmount\": 100.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/account/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"account",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Account Balance",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/account/2/88888888",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"account",
+						"2",
+						"88888888"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
